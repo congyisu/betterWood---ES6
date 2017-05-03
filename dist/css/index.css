@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/*公共样式*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; }
+
+html, body, .container, .hotellistBox, #detailwrapbox, #orderbox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/*下边框*/
+.cities .city-this p:nth-child(2), .cities .city-nameall .city-name .city-name-list li, .container .index-main, .container .index-main .main-item {
+  border-bottom: 1px solid #ccc; }
+
+/*日历页-上月日期*/
+.to-gray {
+  color: #ccc; }
+
+.graycolor {
+  color: #999; }
+
+/*加载动画*/
+.loading {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .loading .circle-wrap {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px -25px;
+    transform: translate3d(-50%, -50%, 0);
+    animation: loading 4s linear infinite; }
+    .loading .circle-wrap .circle {
+      position: absolute;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      background: #e0f2be; }
+    .loading .circle-wrap .circle-index1 {
+      transform: rotate(45deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index2 {
+      transform: rotate(90deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index3 {
+      transform: rotate(135deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index4 {
+      transform: rotate(180deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index5 {
+      transform: rotate(225deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index6 {
+      transform: rotate(270deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index7 {
+      transform: rotate(315deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index8 {
+      transform: rotate(360deg);
+      transform-origin: 25px 25px; }
+
+.none {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+/*公共样式*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; }
+
+html, body, .container, .hotellistBox, #detailwrapbox, #orderbox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/*下边框*/
+.cities .city-this p:nth-child(2), .cities .city-nameall .city-name .city-name-list li, .container .index-main, .container .index-main .main-item {
+  border-bottom: 1px solid #ccc; }
+
+/*日历页-上月日期*/
+.to-gray {
+  color: #ccc; }
+
+.graycolor {
+  color: #999; }
+
+/*加载动画*/
+.loading {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .loading .circle-wrap {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px -25px;
+    transform: translate3d(-50%, -50%, 0);
+    animation: loading 4s linear infinite; }
+    .loading .circle-wrap .circle {
+      position: absolute;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      background: #e0f2be; }
+    .loading .circle-wrap .circle-index1 {
+      transform: rotate(45deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index2 {
+      transform: rotate(90deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index3 {
+      transform: rotate(135deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index4 {
+      transform: rotate(180deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index5 {
+      transform: rotate(225deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index6 {
+      transform: rotate(270deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index7 {
+      transform: rotate(315deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index8 {
+      transform: rotate(360deg);
+      transform-origin: 25px 25px; }
+
+.none {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+/*城市页*/
+.cities {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #fff;
+  overflow-y: scroll;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s ease-in-out; }
+  .cities .city-head {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #dbdde3;
+    position: relative; }
+    .cities .city-head span {
+      position: absolute;
+      color: #24aef2;
+      left: 10px;
+      top: 0; }
+    .cities .city-head h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 1em; }
+  .cities .city-this {
+    width: 100%;
+    height: auto; }
+    .cities .city-this p:first-child {
+      height: 24px;
+      line-height: 24px;
+      background: #EBEBEB;
+      padding-left: 15px;
+      color: #999; }
+      .cities .city-this p:first-child span {
+        font-size: 0.75em; }
+    .cities .city-this p:nth-child(2) {
+      height: 34px;
+      line-height: 34px;
+      padding-left: 12px;
+      color: #333;
+      font-size: 0.85em; }
+    .cities .city-this p:last-child {
+      height: 34px;
+      line-height: 34px;
+      padding: 0 12px; }
+      .cities .city-this p:last-child i {
+        color: #24aef2;
+        font-size: 0.85em; }
+      .cities .city-this p:last-child span {
+        color: #24aef2;
+        float: right; }
+  .cities .city-hot, .cities .city-firstname, .cities .city-nameall .city-name {
+    width: 100%;
+    height: auto; }
+    .cities .city-hot p, .cities .city-firstname p, .cities .city-nameall .city-name p {
+      height: 24px;
+      line-height: 24px;
+      background: #EBEBEB;
+      padding-left: 15px;
+      color: #8a9399; }
+      .cities .city-hot p span, .cities .city-firstname p span, .cities .city-nameall .city-name p span {
+        font-size: 0.75em; }
+    .cities .city-hot .city-hot-list, .cities .city-firstname .city-hot-list, .cities .city-nameall .city-name .city-hot-list {
+      width: 100%;
+      height: 140px; }
+      .cities .city-hot .city-hot-list li, .cities .city-firstname .city-hot-list li, .cities .city-nameall .city-name .city-hot-list li {
+        width: 33.333%;
+        height: 35px;
+        float: left;
+        line-height: 35px;
+        text-align: center;
+        font-size: 0.75em; }
+  .cities .city-firstname .city-firstname-list {
+    width: 100%;
+    height: 105px; }
+    .cities .city-firstname .city-firstname-list span {
+      width: 11.111%;
+      height: 35px;
+      float: left;
+      line-height: 35px;
+      text-align: center;
+      font-size: 0.75em; }
+  .cities .city-nameall .city-name .city-name-list {
+    width: 100%; }
+    .cities .city-nameall .city-name .city-name-list li {
+      height: 35px;
+      line-height: 35px;
+      font-size: 0.75em;
+      padding-left: 12px; }
+
+.cities-active {
+  transform: translate3d(0, 0, 0); }
+
+/*返回顶部*/
+.top {
+  position: fixed;
+  bottom: 2%;
+  right: 4%;
+  z-index: 4; }
+  .top span {
+    font-size: 26px;
+    color: #999; }
+
+.top-active {
+  display: none; }
+
+/*公共样式*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; }
+
+html, body, .container, .hotellistBox, #detailwrapbox, #orderbox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/*下边框*/
+.cities .city-this p:nth-child(2), .cities .city-nameall .city-name .city-name-list li, .container .index-main, .container .index-main .main-item {
+  border-bottom: 1px solid #ccc; }
+
+/*日历页-上月日期*/
+.to-gray {
+  color: #ccc; }
+
+.graycolor {
+  color: #999; }
+
+/*加载动画*/
+.loading {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .loading .circle-wrap {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px -25px;
+    transform: translate3d(-50%, -50%, 0);
+    animation: loading 4s linear infinite; }
+    .loading .circle-wrap .circle {
+      position: absolute;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      background: #e0f2be; }
+    .loading .circle-wrap .circle-index1 {
+      transform: rotate(45deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index2 {
+      transform: rotate(90deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index3 {
+      transform: rotate(135deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index4 {
+      transform: rotate(180deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index5 {
+      transform: rotate(225deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index6 {
+      transform: rotate(270deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index7 {
+      transform: rotate(315deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index8 {
+      transform: rotate(360deg);
+      transform-origin: 25px 25px; }
+
+.none {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+/*日历页*/
+.calendar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: #f5f6f5;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s ease-in-out; }
+  .calendar .calendar-head {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background: #fff;
+    display: -webkit-flex;
+    padding: 0 3%; }
+    .calendar .calendar-head span {
+      width: 33.33%; }
+      .calendar .calendar-head span:nth-child(1) {
+        color: #24aef2;
+        font-size: 16px; }
+      .calendar .calendar-head span:nth-child(2) {
+        text-align: center; }
+      .calendar .calendar-head span:nth-child(3) {
+        text-align: right;
+        color: #24aef2; }
+  .calendar .calendar-tit {
+    height: 40px;
+    padding-top: 18px;
+    padding-left: 15px;
+    font-size: 0.8em;
+    color: #999; }
+  .calendar .calendar-cont {
+    width: 100%;
+    background: #fff; }
+    .calendar .calendar-cont .calendar-cont-tit {
+      display: -webkit-flex;
+      height: 45px;
+      line-height: 45px;
+      border-bottom: 1px solid #dbdde3;
+      border-top: 1px solid #dbdde3;
+      padding: 0 3%; }
+      .calendar .calendar-cont .calendar-cont-tit span {
+        flex-grow: 1; }
+        .calendar .calendar-cont .calendar-cont-tit span:nth-child(1) {
+          color: #24aef2;
+          font-size: 14px; }
+        .calendar .calendar-cont .calendar-cont-tit span:nth-child(2) {
+          text-align: center;
+          font-size: 0.8em;
+          color: #333333; }
+        .calendar .calendar-cont .calendar-cont-tit span:nth-child(3) {
+          text-align: right;
+          color: #24aef2;
+          font-size: 14px; }
+    .calendar .calendar-cont .calendar-cont-week {
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      border-bottom: 2px solid #24aef2; }
+      .calendar .calendar-cont .calendar-cont-week span {
+        width: 14.2%;
+        font-size: 0.6em;
+        color: #999;
+        display: inline-block;
+        text-align: center; }
+    .calendar .calendar-cont .calendar-cont-days {
+      width: 100%;
+      overflow: hidden; }
+      .calendar .calendar-cont .calendar-cont-days span {
+        width: 14.285%;
+        height: 45px;
+        line-height: 45px;
+        float: left;
+        text-align: center; }
+      .calendar .calendar-cont .calendar-cont-days .currentday {
+        background: #24aef2;
+        color: #fff; }
+  .calendar .calendar-info {
+    width: 100%;
+    margin-top: 15px;
+    background: #fff;
+    padding-left: 10px; }
+    .calendar .calendar-info div:nth-child(1) {
+      padding-left: 5px;
+      padding-right: 10px;
+      height: 55px;
+      line-height: 55px;
+      border-bottom: 1px solid #CCCCCC; }
+      .calendar .calendar-info div:nth-child(1) span:nth-child(1) {
+        font-size: 0.8em;
+        color: #333; }
+      .calendar .calendar-info div:nth-child(1) span:nth-child(2) {
+        font-size: 0.8em;
+        color: #999;
+        float: right; }
+    .calendar .calendar-info div:nth-child(2) {
+      padding-left: 5px;
+      padding-right: 10px;
+      height: 55px; }
+      .calendar .calendar-info div:nth-child(2) span:nth-child(1) {
+        font-size: 0.8em;
+        color: #333;
+        line-height: 55px; }
+      .calendar .calendar-info div:nth-child(2) p {
+        float: right;
+        width: 75px;
+        height: 25px;
+        line-height: 25px;
+        border: 1px solid #24aef2;
+        margin-top: 16px;
+        display: flex; }
+        .calendar .calendar-info div:nth-child(2) p em {
+          width: 33.333%;
+          text-align: center; }
+          .calendar .calendar-info div:nth-child(2) p em:nth-child(1) {
+            background: #24aef2;
+            color: #fff; }
+          .calendar .calendar-info div:nth-child(2) p em:nth-child(3) {
+            background: #24aef2;
+            color: #fff; }
+
+.calendar-active {
+  transform: translate3d(0, 0, 0); }
+
+/*酒店预订首页*/
+.container {
+  width: 100%;
+  height: 100%;
+  background: #f5f6f5; }
+  .container .banner {
+    width: 100%;
+    height: 135px; }
+    .container .banner ul, .container .banner ul li {
+      height: 135px; }
+    .container .banner img {
+      width: 100%;
+      height: 135px; }
+    .container .banner h3 {
+      font-size: 1.25em;
+      color: #fff;
+      position: absolute;
+      left: 10px;
+      bottom: 9px;
+      z-index: 2; }
+  .container .index-main {
+    padding-left: 15px;
+    background: #fff; }
+    .container .index-main .main-item {
+      width: 100%;
+      height: 70px;
+      line-height: 70px; }
+      .container .index-main .main-item span:first-child {
+        color: #E6E6E6;
+        font-size: 40%;
+        margin-right: 10px; }
+      .container .index-main .main-item span:nth-child(2) {
+        font-size: 0.75em;
+        color: #999;
+        margin-right: 25px; }
+      .container .index-main .main-item span:nth-child(3) {
+        font-size: 0.85em; }
+    .container .index-main .main-item:first-child {
+      position: relative; }
+      .container .index-main .main-item:first-child span:nth-child(3) {
+        color: #24aef2; }
+      .container .index-main .main-item:first-child span:nth-child(4) {
+        color: #24aef2;
+        position: absolute;
+        right: 85px;
+        top: 0;
+        font-size: 8px; }
+      .container .index-main .main-item:first-child .location {
+        width: 70px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        display: -webkit-flex;
+        flex-direction: column;
+        border-left: 1px solid #ccc;
+        color: #24aef2; }
+        .container .index-main .main-item:first-child .location em, .container .index-main .main-item:first-child .location small {
+          display: inline-block;
+          height: 50%;
+          line-height: 35px;
+          text-align: center; }
+        .container .index-main .main-item:first-child .location small {
+          font-size: 0.7em; }
+    .container .index-main .main-item:nth-child(2) span:nth-child(3), .container .index-main .main-item:nth-child(3) span:nth-child(3) {
+      color: #333; }
+    .container .index-main .main-item:nth-child(2) span:nth-child(4), .container .index-main .main-item:nth-child(3) span:nth-child(4) {
+      color: #24aef2;
+      float: right;
+      margin-right: 15px;
+      font-size: 8px; }
+    .container .index-main .main-item:nth-child(3) span:nth-child(3) em {
+      font-style: normal;
+      font-size: 0.85em; }
+    .container .index-main .main-item:nth-child(3) span:nth-child(3) strong, .container .index-main .main-item:nth-child(3) span:nth-child(3) b {
+      font-weight: normal;
+      font-size: 0.85em; }
+    .container .index-main .main-item:last-child {
+      border-bottom: none; }
+  .container .search {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #24aef2;
+    color: #fff;
+    margin-top: 16px;
+    text-align: center; }
+    .container .search span:first-child {
+      margin-right: 5px; }

@@ -1,0 +1,30 @@
+[
+  {
+    "url": "../img/banner1.jpg",
+    "title": 1
+  },
+  {
+    "url": "../img/banner2.jpg",
+    "title": 2
+  },
+  {
+    "url": "../img/banner3.jpg",
+    "title": 3
+  },
+  {
+    "url": "../img/banner4.jpg",
+    "title": 4
+  },
+  {
+    "url": "../img/banner5.jpg",
+    "title": 5
+  },
+  {
+    "url": "../img/banner6.jpg",
+    "title": 6
+  },
+  {
+    "url": "../img/banner7.jpg",
+    "title": 7
+  }
+]

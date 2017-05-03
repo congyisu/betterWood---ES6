@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>酒店列表</title>
+    <link rel="stylesheet" href="../../dist/css/reset.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../../dist/css/hotellist.css"/>
+</head>
+<body>
+<div class="hotellistBox">
+    <!--日历页-->
+    <div class="calendar" id="calendar">
+        <div class="calendar-head">
+            <span class="icon iconfont back">&#xe652;</span>
+            <span>343间酒店</span>
+            <span class="finish">完成</span>
+        </div>
+        <div class="calendar-tit">选择入住时间</div>
+        <div class="calendar-cont">
+            <div class="calendar-cont-tit">
+                <span class="icon iconfont prev">&#xe652;</span>
+                <span class="calendar-nowdate"></span>
+                <span class="icon iconfont next">&#xe654;</span>
+            </div>
+            <div class="calendar-cont-week">
+                <span>周日</span><span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span><span>周六</span>
+            </div>
+            <div class="calendar-cont-days"></div>
+        </div>
+        <div class="calendar-info">
+            <div>
+                <span>入住日</span>
+                <span class="currday"></span>
+            </div>
+            <div>
+                <span>住几晚</span>
+
+                <p>
+                    <em class="minuDay">-</em>
+                    <em class="checkin-Days">1</em>
+                    <em class="addDay">+</em>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--酒店列表-->
+    <div class="detailslist" id="detailslist">
+        <!--酒店列表-头部-->
+        <div class="details-head">
+            <span class="icon iconfont goback">&#xe652;</span>
+            <span class="nights"></span>
+            <span class="check-out-date-info"></span>
+
+            <h2>343间酒店</h2>
+        </div>
+        <!--酒店列表-标题-->
+        <div class="details-tit">
+            <p>
+                <b>入住&nbsp</b><span class="listcheckin">7月8日</span>
+                <b>离店&nbsp</b><span class="listcheckout">7月8日</span>
+            </p>
+
+            <p class="modify-date">修改 <span class="icon iconfont">&#xe654;</span></p>
+        </div>
+        <!--酒店列表-所有信息-->
+        <div class="details-info">
+            <!--列表所有信息-->
+            No More!
+        </div>
+        <!--导航-筛选部分-->
+        <div class="filter">
+            <!--酒店列表-下方导航-->
+            <ul class="filter-nav">
+                <li href="#" filter="arrange" index="0" class="noline iconfont icon-arrow-top">排序</li>
+                <li href="#" filter="price" index="1" class="iconfont icon-arrow-top">价格</li>
+                <li href="#" filter="region" index="2" class="iconfont icon-arrow-top">区域</li>
+                <li href="#" filter="rank" index="3" class="iconfont icon-arrow-top">星级</li>
+            </ul>
+        </div>
+        <!--酒店列表-遮罩层-->
+        <div class="masker">
+            <!--酒店列表-导航对应信息-->
+            <div class="filter-area">
+                <div class="filter-item arrange distance">
+                    <p class="iconfont icon-checkbox" dir="up" xu="price">价格 - 由低到高</p>
+
+                    <p class="iconfont icon-checkbox" dir="down" xu="price">价格 - 由高到低</p>
+
+                    <p class="iconfont icon-checkbox" dir="up" xu="distance">距离 - 由近到远</p>
+
+                    <p class="iconfont icon-checkbox" dir="down" xu="distance">距离 - 由远到近</p>
+                </div>
+                <div class="filter-item price">
+                    <p class="iconfont icon-checkbox">0-99元</p>
+
+                    <p class="iconfont icon-checkbox">100-199元</p>
+
+                    <p class="iconfont icon-checkbox">200-400元</p>
+
+                    <p class="iconfont icon-checkbox">400元以上</p>
+                </div>
+                <div class="filter-item region">
+                    <p class="iconfont icon-checkbox" region="海淀区">海淀区</p>
+
+                    <p class="iconfont icon-checkbox" region="朝阳区">朝阳区</p>
+
+                    <p class="iconfont icon-checkbox" region="东城区">东城区</p>
+
+                    <p class="iconfont icon-checkbox" region="西城区">西城区</p>
+
+                    <p class="iconfont icon-checkbox" region="通州区">通州区</p>
+
+                    <p class="iconfont icon-checkbox" region="大兴区">大兴区</p>
+                </div>
+                <div class="filter-item rank">
+                    <p class="iconfont icon-checkbox" rank="二星及以下 / 经济型">二星以下/经济型</p>
+
+                    <p class="iconfont icon-checkbox" rank="三星">三星</p>
+
+                    <p class="iconfont icon-checkbox" rank="四星">四星</p>
+
+                    <p class="iconfont icon-checkbox" rank="五星">五星</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../dist/js/hotellist.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+@import "common";
+
+/*日历页*/
+.calendar {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   background: $backColor;
+   transform: translate3d(100%, 0, 0);
+   transition: transform 0.3s ease-in-out;
+   .calendar-head {
+     width: 100%;
+     height: 45px;
+     line-height: 45px;
+     background: $whiteColor;
+     display: -webkit-flex;
+     padding: 0 3%;
+     span {
+       width: 33.33%;
+       &:nth-child(1) {
+         color: $baseColor;
+         font-size: 16px;
+       }
+       &:nth-child(2) {
+         text-align: center;
+       }
+       &:nth-child(3) {
+         text-align: right;
+         color: $baseColor;
+       }
+     }
+   }
+   .calendar-tit {
+     height: 40px;
+     padding-top: 18px;
+     padding-left: 15px;
+     font-size: 0.8em;
+     color: $dimColor;
+   }
+   .calendar-cont {
+     width: 100%;
+     background: $whiteColor;
+     .calendar-cont-tit {
+       display: -webkit-flex;
+       height: 45px;
+       line-height: 45px;
+       border-bottom: 1px solid #dbdde3;
+       border-top: 1px solid #dbdde3;
+       padding: 0 3%;
+       span {
+         flex-grow: 1;
+         &:nth-child(1) {
+           color: $baseColor;
+           font-size: 14px;
+         }
+         &:nth-child(2) {
+           text-align: center;
+           font-size: 0.8em;
+           color: #333333;
+         }
+         &:nth-child(3) {
+           text-align: right;
+           color: $baseColor;
+           font-size: 14px;
+         }
+       }
+     }
+     .calendar-cont-week {
+       width: 100%;
+       height: 35px;
+       line-height: 35px;
+       border-bottom: 2px solid $baseColor;
+       span {
+         width: 14.2%;
+         font-size: 0.6em;
+         color: $dimColor;
+         display: inline-block;
+         text-align: center;
+       }
+     }
+     .calendar-cont-days {
+       width: 100%;
+       overflow: hidden;
+       span {
+         width: 14.285%;
+         height: 45px;
+         line-height: 45px;
+         float: left;
+         text-align: center;
+       }
+       .currentday {
+         background: $baseColor;
+         color: $whiteColor;
+       }
+       .graycolor {
+
+       }
+     }
+   }
+   .calendar-info {
+     width: 100%;
+     margin-top: 15px;
+     background: $whiteColor;
+     padding-left: 10px;
+     div {
+       &:nth-child(1) {
+         padding-left: 5px;
+         padding-right: 10px;
+         height: 55px;
+         line-height: 55px;
+         border-bottom: 1px solid #CCCCCC;
+         span:nth-child(1) {
+           font-size: 0.8em;
+           color: #333;
+         }
+         span:nth-child(2) {
+           font-size: 0.8em;
+           color: $dimColor;
+           float: right;
+         }
+       }
+       &:nth-child(2) {
+         padding-left: 5px;
+         padding-right: 10px;
+         height: 55px;
+         span:nth-child(1) {
+           font-size: 0.8em;
+           color: #333;
+           line-height: 55px;
+         }
+         p {
+           float: right;
+           width: 75px;
+           height: 25px;
+           line-height: 25px;
+           border: 1px solid $baseColor;
+           margin-top: 16px;
+           display: flex;
+           em {
+             width: 33.333%;
+             text-align: center;
+             &:nth-child(1) {
+               background: $baseColor;
+               color: $whiteColor;
+             }
+             &:nth-child(3) {
+               background: $baseColor;
+               color: $whiteColor;
+             }
+           }
+         }
+       }
+     }
+   }
+}
+
+.calendar-active {
+  transform: translate3d(0, 0, 0);
+}

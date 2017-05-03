@@ -1,0 +1,505 @@
+@charset "UTF-8";
+/*公共样式*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; }
+
+html, body, .container, .hotellistBox, #detailwrapbox, #orderbox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/*下边框*/
+#detailwrapbox .detailbox .detailbox-section .detailbox-near dl, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl {
+  border-bottom: 1px solid #ccc; }
+
+/*日历页-上月日期*/
+.to-gray {
+  color: #ccc; }
+
+.graycolor {
+  color: #999; }
+
+/*加载动画*/
+.loading {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .loading .circle-wrap {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px -25px;
+    transform: translate3d(-50%, -50%, 0);
+    animation: loading 4s linear infinite; }
+    .loading .circle-wrap .circle {
+      position: absolute;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      background: #e0f2be; }
+    .loading .circle-wrap .circle-index1 {
+      transform: rotate(45deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index2 {
+      transform: rotate(90deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index3 {
+      transform: rotate(135deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index4 {
+      transform: rotate(180deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index5 {
+      transform: rotate(225deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index6 {
+      transform: rotate(270deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index7 {
+      transform: rotate(315deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index8 {
+      transform: rotate(360deg);
+      transform-origin: 25px 25px; }
+
+.none {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+#detailwrapbox {
+  /*酒店详情页*/ }
+  #detailwrapbox .detailbox {
+    width: 100%;
+    height: 100%;
+    background: #F6F6F6;
+    display: -webkit-flex;
+    flex-direction: column; }
+    #detailwrapbox .detailbox .detailbox-head {
+      width: 100%;
+      height: 45px;
+      line-height: 45px;
+      border-bottom: 1px solid #dbdde3;
+      position: relative;
+      background: #fff; }
+      #detailwrapbox .detailbox .detailbox-head span {
+        position: absolute;
+        color: #24aef2;
+        font-size: 16px;
+        left: 10px;
+        top: 0; }
+      #detailwrapbox .detailbox .detailbox-head h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 1em; }
+    #detailwrapbox .detailbox .detailbox-section {
+      width: 100%;
+      overflow-y: scroll;
+      flex-grow: 1; }
+      #detailwrapbox .detailbox .detailbox-section .img-wrap {
+        width: 100%;
+        position: relative; }
+        #detailwrapbox .detailbox .detailbox-section .img-wrap img {
+          width: 100%; }
+        #detailwrapbox .detailbox .detailbox-section .img-wrap .check-all-img {
+          position: absolute;
+          bottom: 15px;
+          right: 0;
+          background: black;
+          color: #fff;
+          padding: 5px 12px;
+          font-size: 11.5px; }
+      #detailwrapbox .detailbox .detailbox-section .all-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1; }
+        #detailwrapbox .detailbox .detailbox-section .all-img .all-img-wrap {
+          width: 100%;
+          background: #ffffff;
+          position: absolute;
+          top: 50%;
+          min-height: 180px;
+          transform: translate3d(0, -50%, 0); }
+          #detailwrapbox .detailbox .detailbox-section .all-img .all-img-wrap img {
+            width: 100%;
+            height: 180px; }
+        #detailwrapbox .detailbox .detailbox-section .all-img .swiper-wrapper {
+          align-items: center; }
+      #detailwrapbox .detailbox .detailbox-section .detailbox-info {
+        width: 100%;
+        padding-top: 15px;
+        background: #fff; }
+        #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-tit {
+          height: 30px;
+          line-height: 30px;
+          width: 95%;
+          margin: auto;
+          border: 1px solid #24aef2;
+          border-radius: 7px;
+          overflow: hidden; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-tit a {
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            font-size: 13px;
+            float: left;
+            color: #24aef2; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-tit .oInf {
+            background: #24aef2;
+            color: #fff; }
+        #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts {
+          width: 100%;
+          overflow-x: hidden; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont {
+            width: 200%;
+            transition: transform ease 0.3s; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont .detailbox-info-cont {
+              width: 50%;
+              float: left; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont .detailbox-info-cont h4 {
+                font-size: 15.5px;
+                padding-left: 15px;
+                margin-top: 15px; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont .detailbox-info-cont ul {
+                width: 100%;
+                padding: 0 10px;
+                margin-top: 15px;
+                border-bottom: 1px solid #eee; }
+                #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont .detailbox-info-cont ul li {
+                  height: 42px;
+                  line-height: 42px;
+                  border-top: 1px solid #eee;
+                  padding: 0 10px; }
+                  #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont .detailbox-info-cont ul li span:first-child {
+                    font-size: 12px;
+                    color: #ccc;
+                    margin-right: 13px; }
+                  #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont .detailbox-info-cont ul li span:last-child {
+                    font-size: 12px;
+                    color: #747474; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont .detailbox-hotel-cont {
+              float: left;
+              width: 50%;
+              height: 162px;
+              overflow-y: scroll;
+              padding: 15px;
+              font-weight: normal;
+              margin-bottom: 15px; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-info .detailbox-info-conts .infocont .detailbox-hotel-cont article {
+                line-height: 24px;
+                font-size: 13.5px;
+                color: #333333; }
+      #detailwrapbox .detailbox .detailbox-section .detailbox-room {
+        width: 100%;
+        height: auto;
+        margin-top: 18px;
+        border-top: 1px solid #eeeeee;
+        background: #fff; }
+        #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-tit {
+          width: 100%;
+          height: 38px;
+          border-bottom: 1px solid #dbdde3;
+          padding-left: 15px;
+          padding-right: 10px; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-tit p {
+            line-height: 38px; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-tit p:first-child {
+            float: left;
+            color: #666; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-tit p:first-child b {
+              font-weight: normal;
+              font-size: 0.9em; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-tit p:first-child span {
+              font-size: 0.9em; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-tit p:first-child span:first-child {
+              margin-right: 20px; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-tit p:last-child {
+            float: right;
+            font-size: 0.9em;
+            color: #24aef2; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-tit p:last-child span {
+              font-size: 12px; }
+        #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info {
+          padding-left: 11px;
+          padding-right: 9px;
+          width: 100%; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three {
+            width: 100%;
+            height: 70px;
+            border-bottom: 1px solid #EBEBEB;
+            display: -webkit-flex; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one p, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p {
+            width: 33.33%;
+            padding-left: 5px;
+            padding-right: 5px;
+            position: relative; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one p:first-child b, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:first-child b, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:first-child b {
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 50px; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one p:first-child span, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:first-child span, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:first-child span {
+              color: #8F8F8F;
+              font-size: 9px;
+              position: absolute;
+              left: 5px;
+              top: 35px; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one p:first-child span:last-child, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:first-child span:last-child, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:first-child span:last-child {
+                margin-left: 40%; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one p:nth-child(2), #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:nth-child(2), #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:nth-child(2) {
+              text-align: right;
+              line-height: 70px; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one p:nth-child(2) span:first-child, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:nth-child(2) span:first-child, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:nth-child(2) span:first-child {
+                font-size: 11.5px;
+                color: #EA9135; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one p:last-child, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:last-child, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:last-child {
+              text-align: right;
+              padding-top: 6%; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-one p:last-child em, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:last-child em, #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:last-child em {
+                width: 54px;
+                height: 24px;
+                font-weight: normal;
+                display: inline-block;
+                border: 1px solid #24aef2;
+                border-radius: 3px;
+                color: #24aef2;
+                text-align: center; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:last-child {
+            text-align: right;
+            padding-top: 6%; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-two p:last-child em {
+              width: 54px;
+              height: 24px;
+              font-weight: normal;
+              background: #E3E7EA;
+              display: inline-block;
+              border: 1px solid #AFB1B0;
+              border-radius: 3px;
+              color: #AFB1B0;
+              text-align: center; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:nth-child(2) {
+            text-align: right;
+            line-height: 50px;
+            position: relative; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:nth-child(2) span:first-child {
+              font-size: 11.5px;
+              color: #EA9135; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-info .info-three p:nth-child(2) i {
+              font-size: 10.5px;
+              color: #fff;
+              background: #FD9228;
+              padding: 1px 3px;
+              position: absolute;
+              border-radius: 2px;
+              right: 3%;
+              top: 35px;
+              height: 17px;
+              line-height: 17px; }
+        #detailwrapbox .detailbox .detailbox-section .detailbox-room .detailbox-room-more {
+          width: 100%;
+          height: 31.5px;
+          font-size: 11.5px;
+          color: #999;
+          text-align: center;
+          line-height: 31.5px;
+          border-bottom: 1px solid #eeeeee; }
+      #detailwrapbox .detailbox .detailbox-section .detailbox-near, #detailwrapbox .detailbox .detailbox-section .detailbox-sale {
+        width: 100%;
+        margin-top: 19px;
+        border-top: 1px solid #eeeeee;
+        background: #fff; }
+        #detailwrapbox .detailbox .detailbox-section .detailbox-near h2, #detailwrapbox .detailbox .detailbox-section .detailbox-sale h2 {
+          font-size: 15px;
+          padding-left: 12.5px;
+          padding-top: 17px; }
+        #detailwrapbox .detailbox .detailbox-section .detailbox-near dl, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl {
+          width: 100%;
+          padding: 20px 12px;
+          display: -webkit-flex; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dt, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dt {
+            width: 70px;
+            height: 70px;
+            margin-right: 13px;
+            margin-top: 3px; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dt img, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dt img {
+              width: 70px;
+              height: 70px; }
+          #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd {
+            flex-grow: 1;
+            width: 60%; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd h3, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd h3 {
+              font-size: 14px;
+              color: #333333;
+              width: 80%;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one {
+              display: -webkit-flex; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:first-child span, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:first-child span {
+                font-size: 11px;
+                color: #E59442;
+                margin-right: 10px; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:first-child strong:nth-child(2), #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:first-child strong:nth-child(2) {
+                font-weight: normal; }
+                #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:first-child strong:nth-child(2) em, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:first-child strong:nth-child(2) em {
+                  display: inline-block;
+                  font-size: 8px;
+                  padding: 0 1px;
+                  height: 16px;
+                  line-height: 16px;
+                  background: #F88D25;
+                  color: #fff; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:first-child strong:nth-child(3), #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:first-child strong:nth-child(3) {
+                font-weight: normal; }
+                #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:first-child strong:nth-child(3) em, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:first-child strong:nth-child(3) em {
+                  display: inline-block;
+                  font-size: 8px;
+                  padding: 0 1px;
+                  height: 16px;
+                  line-height: 16px;
+                  background: #F24C3C;
+                  color: #fff; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:first-child strong:nth-child(4), #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:first-child strong:nth-child(4) {
+                font-weight: normal; }
+                #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:first-child strong:nth-child(4) em, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:first-child strong:nth-child(4) em {
+                  display: inline-block;
+                  font-size: 8px;
+                  padding: 0 1px;
+                  height: 16px;
+                  line-height: 16px;
+                  background: #15ACE3;
+                  color: #fff; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:last-child, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:last-child {
+                flex-grow: 1;
+                text-align: right; }
+                #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:last-child b, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:last-child b {
+                  font-weight: normal;
+                  color: #E59442; }
+                #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .one p:last-child i, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .one p:last-child i {
+                  font-size: 11px;
+                  color: #777777; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .two span, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .two span, #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .three span, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .three span {
+              color: #777;
+              font-size: 10px; }
+            #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .three, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .three {
+              width: 100%; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .three span:first-child, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .three span:first-child {
+                width: 75%;
+                display: inline-block;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis; }
+              #detailwrapbox .detailbox .detailbox-section .detailbox-near dl dd .three span:last-child, #detailwrapbox .detailbox .detailbox-section .detailbox-sale dl dd .three span:last-child {
+                float: right; }
+        #detailwrapbox .detailbox .detailbox-section .detailbox-near .detailbox-near-more, #detailwrapbox .detailbox .detailbox-section .detailbox-sale .detailbox-near-more, #detailwrapbox .detailbox .detailbox-section .detailbox-sale .detailbox-sale-more {
+          width: 100%;
+          height: 31.5px;
+          font-size: 11.5px;
+          color: #999;
+          text-align: center;
+          line-height: 31.5px;
+          border-bottom: 1px solid #eeeeee; }
+    #detailwrapbox .detailbox .detailmask {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.5);
+      transition: transform 0.01s ease-in;
+      transform: translate3d(0, 100%, 0); }
+      #detailwrapbox .detailbox .detailmask.show {
+        transform: translate3d(0, 0, 0); }
+      #detailwrapbox .detailbox .detailmask .detailmaskbox {
+        width: 100%;
+        height: auto;
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
+        #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list {
+          padding: 0 10px; }
+          #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list dl {
+            border-bottom: 2px solid #edeef1;
+            display: -webkit-flex;
+            padding: 12px 0 12px 2px; }
+            #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list dl dt {
+              width: 70px;
+              height: 70px;
+              border: 1px solid #CCCCCC;
+              margin-right: 16px; }
+            #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list dl dd {
+              flex-grow: 1;
+              position: relative; }
+              #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list dl dd h2 {
+                font-size: 15px;
+                padding-top: 1%; }
+              #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list dl dd b {
+                font-size: 14px;
+                color: #F1902F;
+                font-weight: normal; }
+              #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list dl dd i {
+                font-size: 10.5px;
+                color: #fff;
+                background: #FD9228;
+                padding: 1px 3px;
+                position: absolute;
+                border-radius: 2px;
+                left: 0;
+                top: 45px;
+                height: 17px;
+                line-height: 17px; }
+              #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list dl dd .maskdelete {
+                width: 27px;
+                height: 27px;
+                font-size: 27px;
+                color: #999;
+                position: absolute;
+                right: 0;
+                top: 2px;
+                transform: rotate(45deg); }
+          #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list ul {
+            width: 100%; }
+            #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list ul li {
+              height: 40px;
+              line-height: 40px;
+              padding-left: 8px;
+              border-bottom: 1px solid #edeef1; }
+              #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list ul li span:first-child {
+                color: #D8D8D8; }
+              #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list ul li span:nth-child(2) {
+                color: #999;
+                font-size: 12px; }
+              #detailwrapbox .detailbox .detailmask .detailmaskbox .detailmaskbox-list ul li span:last-child {
+                float: right;
+                font-size: 10px;
+                color: #333;
+                padding-right: 5px; }
+        #detailwrapbox .detailbox .detailmask .detailmaskbox .ordernow {
+          width: 100%;
+          height: 40px;
+          background: #24aef2;
+          color: #fff;
+          text-align: center;
+          line-height: 40px;
+          font-size: 17px; }

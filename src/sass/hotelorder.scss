@@ -1,0 +1,656 @@
+@import "common";
+@import "slideselector";
+
+/*订单填写页*/
+.writeorder {
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+  display: -webkit-flex;
+  flex-direction: column;
+  .writeorder-head {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #dbdde3;
+    position: relative;
+    background: $whiteColor;
+    span {
+      position: absolute;
+      color: $baseColor;
+      font-size: 16px;
+      left: 10px;
+      top: 0;
+    }
+    h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 1em;
+    }
+  }
+  .writeorder-section {
+    width: 100%;
+    overflow-y: scroll;
+    flex-grow: 1;
+    .writeorder-hotelinfo {
+      width: 100%;
+      background: $whiteColor;
+      .writeorder-hotelinfolist {
+        background: $whiteColor;
+        margin: 0 9px 0 10px;
+        border-bottom: 1px solid #edeef1;
+        dl {
+          border-bottom: 1px solid #d9d9d9;
+          display: -webkit-flex;
+          padding: 16px 0 12px 4px;
+          dt {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #CCCCCC;
+            margin-right: 16px;
+            img {
+              width: 70px;
+              height: 70px;
+            }
+          }
+          dd {
+            flex-grow: 1;
+            position: relative;
+            h2 {
+              font-size: 0.85em;
+              padding-top: 1%;
+              color: #333;
+              line-height: 20px;
+            }
+            b {
+              font-size: 0.85em;
+              color: #333;
+              font-weight: normal;
+              line-height: 20px;
+            }
+            p {
+              em {
+                color: #FD9228;
+              }
+              i {
+                font-size: 10.5px;
+                color: $whiteColor;
+                background: #FD9228;
+                padding: 1px 3px;
+                position: absolute;
+                border-radius: 2px;
+                left: 15%;
+                top: 45px;
+                height: 17px;
+                line-height: 17px;
+              }
+            }
+
+          }
+        }
+        .writeorder-date {
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          a {
+            width: 50%;
+            text-align: center;
+            display: inline-block;
+            float: left;
+            color: #666;
+            font-size: 0.8em;
+            &:first-child {
+              border-right: 1px solid #d9d9d9;
+            }
+          }
+        }
+      }
+    }
+    .fill-order-model {
+      width: 100%;
+      h3 {
+        height: 40px;
+        color: $dimColor;
+        padding-top: 16px;
+        padding-left: 16.5px;
+      }
+      .fill-order-info {
+        width: 100%;
+        padding-left: 10px;
+        background: $whiteColor;
+        border-top: 1px solid #edeef1;
+        border-bottom: 1px solid #edeef1;
+        p {
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          padding-left: 8px;
+          padding-right: 5px;
+          overflow: hidden;
+          &:first-child {
+            border-bottom: 1px solid #edeef1;
+          }
+          .left {
+            color: #333;
+            font-size: 14px;
+            float: left;
+            width: 60px;
+          }
+          .right {
+            font-weight: normal;
+            float: right;
+            span:first-child {
+              color: #333;
+              font-size: 14px;
+            }
+            span:last-child {
+              font-size: 12.5px;
+              color: $baseColor;
+            }
+          }
+          input {
+            padding-left: 5px;
+            font-size: 14px;
+            color: #333333;
+          }
+          em {
+            color: #C4C6D2;
+            font-size: 14px;
+            float: right;
+            padding-right: 6px;
+          }
+        }
+      }
+    }
+    .writeorder-content {
+      .writeorder-content-list {
+        padding: 18px 15px;
+        h3 {
+          color: #f24c3d;
+          font-size: 12.5px;
+        }
+        article {
+          color: #333;
+          margin-top: 8px;
+          font-size: 9.5px;
+          line-height: 25px;
+        }
+      }
+    }
+    .writeorder-foot {
+      width: 100%;
+      display: flex;
+      height: 55px;
+      line-height: 55px;
+      padding: 0;
+      a {
+        flex-grow: 1;
+        color: $whiteColor;
+        text-align: center;
+        font-size: 15px;
+        &:first-child {
+          background: #16498f;
+        }
+        &:last-child {
+          background: $baseColor;
+        }
+      }
+    }
+  }
+  .ordermask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    transition:transform 0.01s ease-in;
+    transform:translate3d(0,100%,0);
+    &.show{
+      transform:translate3d(0,0,0)!important;
+    }
+    .ordermaskbox {
+      width: 240px;
+      height: 100px;
+      background: $whiteColor;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -120px;
+      margin-top: -50px;
+      p {
+        &:first-child {
+          text-align: center;
+          padding: 10px;
+          border-bottom: 1px solid #C9C9C9;
+          font-size: 14px;
+          color: #333;
+          line-height: 22px;
+        }
+        &:last-child {
+          width: 100%;
+          height: 35px;
+          a {
+            width: 50%;
+            font-size: 14px;
+            display: inline-block;
+            color: #333;
+            text-align: center;
+            &:first-child {
+              border-right: 1px solid #c9c9c9;
+              line-height: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*担保交易页*/
+.secured-transaction {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $backColor;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s ease-in-out;
+  .secured-transaction-head {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #dbdde3;
+    position: relative;
+    background: $whiteColor;
+    span {
+      position: absolute;
+      color: $baseColor;
+      font-size: 16px;
+      left: 10px;
+      top: 0;
+    }
+    h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 1em;
+    }
+  }
+  .secured-transaction-section {
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: scroll;
+    .secured-transaction-currentbalance {
+      width: 100%;
+      height: 47px;
+      border-bottom: 1px solid #C8C8C8;
+      display: flex;
+      padding: 0 16px;
+      line-height: 47px;
+      span {
+        flex-grow: 1;
+        color: #333;
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+    .secured-transaction-hotelinfo {
+      width: 100%;
+      background: $whiteColor;
+      .secured-transaction-hotelinfolist {
+        background: $whiteColor;
+        margin: 0 9px 0 10px;
+        border-bottom: 1px solid #edeef1;
+        dl {
+          display: -webkit-flex;
+          padding: 16px 0 12px 4px;
+          dt {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #CCCCCC;
+            margin-right: 16px;
+            img {
+              width: 70px;
+              height: 70px;
+            }
+          }
+          dd {
+            flex-grow: 1;
+            position: relative;
+            h2 {
+              font-size: 0.85em;
+              padding-top: 1%;
+              color: #333;
+              line-height: 20px;
+            }
+            b {
+              font-size: 0.85em;
+              color: #333;
+              font-weight: normal;
+              line-height: 20px;
+            }
+            p {
+              em {
+                color: #FD9228;
+              }
+              i {
+                font-size: 10.5px;
+                color: $whiteColor;
+                background: #FD9228;
+                padding: 1px 3px;
+                position: absolute;
+                border-radius: 2px;
+                left: 15%;
+                top: 45px;
+                height: 17px;
+                line-height: 17px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+    .fill-order-model {
+      width: 100%;
+      h3 {
+        height: 40px;
+        color: $dimColor;
+        padding-top: 16px;
+        padding-left: 16.5px;
+      }
+      .fill-order-info {
+        width: 100%;
+        padding-left: 10px;
+        background: $whiteColor;
+        border-top: 1px solid #edeef1;
+        border-bottom: 1px solid #edeef1;
+        p {
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          padding-left: 8px;
+          padding-right: 5px;
+          overflow: hidden;
+          &:first-child {
+            border-bottom: 1px solid #edeef1;
+          }
+          .left {
+            color: #333;
+            font-size: 14px;
+            float: left;
+            width: 75px;
+          }
+          input {
+            padding-left: 25px;
+            font-size: 14px;
+            color: #333333;
+          }
+          em {
+            color: #C4C6D2;
+            font-size: 14px;
+            float: right;
+            padding-right: 6px;
+          }
+        }
+        .IDcard-bank,.IDcard-class {
+          span:first-child{
+            color: #333;
+            display: inline-block;
+            font-size: 14px;
+            width: 75px;
+          }
+          span:nth-child(2) {
+            color: #333;
+            font-size: 14px;
+            padding-left: 20px;
+          }
+          span:last-child {
+            font-size: 12.5px;
+            color: $baseColor;
+            float: right;
+            padding-right: 6px;
+          }
+        }
+      }
+    }
+    .secured-transaction-content {
+      .secured-transaction-content-list {
+        padding: 10px 15px 10px 15px;
+        h3 {
+          color: #f24c3d;
+          font-size: 12.5px;
+        }
+        article {
+          color: #333;
+          margin-top: 8px;
+          font-size: 9.5px;
+          line-height: 25px;
+        }
+      }
+    }
+    .secured-transaction-foot {
+      width: 100%;
+      display: flex;
+      height: 55px;
+      line-height: 55px;
+      padding: 0;
+      a {
+        flex-grow: 1;
+        color: $whiteColor;
+        text-align: center;
+        font-size: 15px;
+        &:first-child {
+          background: #16498f;
+        }
+        &:last-child {
+          background: $baseColor;
+        }
+      }
+    }
+  }
+}
+
+.secured-transaction-active {
+  transform: translate3d(0, 0, 0);
+}
+
+/*预订成功页面*/
+.orderfinish {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $backColor;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s ease-in-out;
+  .orderfinish-tit {
+    background: $whiteColor;
+    width: 100%;
+    border-bottom: 1px solid #EFEFEF;
+    p:first-child {
+      text-align: center;
+      padding-top: 32px;
+      color: $baseColor;
+      span:first-child {
+        font-size: 54px;
+      }
+      span:last-child {
+        color: $baseColor;
+        line-height: 31px;
+      }
+    }
+    p:nth-child(2) {
+      padding: 6px 23px 0 23px;
+      font-size: 11px;
+      color: #666666;
+      line-height: 19px;
+    }
+    p:last-child {
+      width: 88%;
+      margin: auto;
+      padding-bottom: 25px;
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 13px;
+        width: 47%;
+        border: 1px solid $baseColor;
+        border-radius: 5px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        &:first-child {
+          margin-right: 6%;
+          background: $baseColor;
+          color: $whiteColor;
+        }
+        &:last-child {
+          color: $baseColor;
+        }
+      }
+    }
+  }
+  .orderfinish-near {
+    width: 100%;
+    margin-top: 19px;
+    padding: 0 10px;
+    border-top: 1px solid #eeeeee;
+    background: $whiteColor;
+    .near-info {
+      height: 43px;
+      line-height: 43px;
+      border-bottom: 1px solid #ccc;
+      h2 {
+        font-size: 14px;
+        float: left;
+      }
+      b {
+        font-weight: normal;
+        float: right;
+        font-size: 12px;
+        color: #888;
+        span:last-child {
+          font-size: 12px;
+        }
+      }
+    }
+    dl {
+      width: 100%;
+      padding: 20px 12px;
+      @extend %bb;
+      display: -webkit-flex;
+      dt {
+        width: 70px;
+        height: 70px;
+        margin-right: 13px;
+        margin-top: 3px;
+        img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+      dd {
+        flex-grow: 1;
+        width: 60%;
+        h3 {
+          font-size: 14px;
+          color: #333333;
+          width: 80%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .one {
+          display: -webkit-flex;
+          p:first-child {
+            span {
+              font-size: 11px;
+              color: #E59442;
+              margin-right: 10px;
+            }
+            strong:nth-child(2) {
+              font-weight: normal;
+              em {
+                display: inline-block;
+                font-size: 8px;
+                padding: 0 1px;
+                height: 16px;
+                line-height: 16px;
+                background: #F88D25;
+                color: $whiteColor;
+              }
+            }
+            strong:nth-child(3) {
+              font-weight: normal;
+              em {
+                display: inline-block;
+                font-size: 8px;
+                padding: 0 1px;
+                height: 16px;
+                line-height: 16px;
+                background: #F24C3C;
+                color: $whiteColor;
+              }
+            }
+            strong:nth-child(4) {
+              font-weight: normal;
+              em {
+                display: inline-block;
+                font-size: 8px;
+                padding: 0 1px;
+                height: 16px;
+                line-height: 16px;
+                background: #15ACE3;
+                color: $whiteColor;
+              }
+            }
+          }
+          p:last-child {
+            flex-grow: 1;
+            text-align: right;
+            b {
+              font-weight: normal;
+              color: #E59442;
+            }
+            i {
+              font-size: 11px;
+              color: #777777;
+            }
+          }
+        }
+        .two {
+          span {
+            color: #777;
+            font-size: 10px;
+          }
+        }
+        .three {
+          @extend .two;
+          width: 100%;
+          span:first-child {
+            width: 75%;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          span:last-child {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.orderfinish-active {
+  transform: translate3d(0, 0, 0);
+}

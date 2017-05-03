@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>百达屋酒店预订</title>
+    <link rel="stylesheet" href="../../dist/css/swiper.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../../dist/css/reset.css"/>
+    <link rel="stylesheet" href="../../dist/css/index.css"/>
+</head>
+<body>
+<!--首页-->
+<div class="container">
+    <!--首页-banner-->
+    <div class="banner swiper-container">
+        <ul class="swiper-wrapper"></ul>
+        <h3>酒店预订</h3>
+    </div>
+    <!--首页-主体-->
+    <div class="index-main">
+        <!--首页-主体-入住地-->
+        <div class="main-item check-in-hotel">
+            <span class="icon iconfont">&#xe601;</span>
+            <span class="main-item-title">入住地</span>
+            <span class="check-in-city-info">北京</span>
+            <span class="icon iconfont">&#xe654;</span>
+            <span class="location">
+                <em class="icon iconfont">&#xf0039;</em>
+                <small>我的位置</small>
+            </span>
+        </div>
+        <!--首页-主体-入住日-->
+        <div class="main-item check-in-date">
+            <span class="icon iconfont">&#xe601;</span>
+            <span class="main-item-title">入住日</span>
+            <span class="check-in-date-info"></span>
+            <span class="icon iconfont">&#xe654;</span>
+        </div>
+        <!--首页-主体-离开日-->
+        <div class="main-item check-out-date">
+            <span class="icon iconfont">&#xe601;</span>
+            <span class="main-item-title">住几晚</span>
+            <span>
+                <em class="nights">1</em>
+                <strong>晚（<b class="check-out-date-info"></b> ）离开</strong>
+            </span>
+            <span class="icon iconfont">&#xe654;</span>
+        </div>
+        <!--首页-主体-酒店名称-->
+        <div class="main-item">
+            <span class="icon iconfont">&#xe601;</span>
+            <span class="main-item-title">酒店名</span>
+            <span><input type="text" placeholder="酒店名称（选填）" class="hotel-name"/></span>
+        </div>
+    </div>
+    <!--首页-搜索框-->
+    <div class="search">
+        <span class="icon iconfont">&#xe694;</span>
+        <span>搜索酒店</span>
+    </div>
+</div>
+
+<!--城市页-->
+<div class="cities" id="citiesAll">
+    <!--城市页-头部-->
+    <div class="city-head">
+        <span class="icon iconfont back">&#xe652;</span>
+
+        <h2>选择城市</h2>
+    </div>
+    <!--城市页-当前-->
+    <div class="city-this">
+        <p><span>当前</span></p>
+
+        <p>北京市海淀区唐家岭路57号八维教育</p>
+
+        <p><i class="checkcity">北京</i><span class="icon iconfont">&#xe682;</span></p>
+    </div>
+    <!--城市页-热门-->
+    <div class="city-hot">
+        <p><span>热门</span></p>
+        <ul class="city-hot-list"></ul>
+    </div>
+    <!--城市页-更多-->
+    <div class="city-firstname">
+        <p><span>更多</span></p>
+
+        <div class="city-firstname-list"></div>
+    </div>
+    <!--城市页-城市列表-->
+    <div class="city-nameall">
+        <!--<div class="city-name">
+            <p class="city-name-line"><span>A</span></p>
+            <ul class="city-name-list">
+                <li>北京</li>
+                <li>上海</li>
+            </ul>
+        </div>-->
+    </div>
+</div>
+<!--城市页-返回顶部-->
+<div class="top top-active"><span class="icon iconfont">&#xe6da;</span></div>
+
+<!--日历页-->
+<div class="calendar" id="calendar">
+    <!--日历页-头部-->
+    <div class="calendar-head">
+        <span class="icon iconfont back">&#xe652;</span>
+        <span>343间酒店</span>
+        <span class="finish">完成</span>
+    </div>
+    <div class="calendar-tit">选择入住时间</div>
+    <!--日历页-日期-->
+    <div class="calendar-cont">
+        <!--日历页-日期标题-->
+        <div class="calendar-cont-tit">
+            <span class="icon iconfont prev">&#xe652;</span>
+            <span class="calendar-nowdate"></span>
+            <span class="icon iconfont next">&#xe654;</span>
+        </div>
+        <!--日历页-周-->
+        <div class="calendar-cont-week">
+            <span>周日</span><span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span><span>周六</span>
+        </div>
+        <!--日历页-日期列表-->
+        <div class="calendar-cont-days"></div>
+    </div>
+    <!--日历页-日期下方入住日，住几晚-->
+    <div class="calendar-info">
+        <div>
+            <span>入住日</span>
+            <span class="currday"></span>
+        </div>
+        <div>
+            <span>住几晚</span>
+
+            <p>
+                <em class="minuDay">-</em>
+                <em class="checkin-Days">1</em>
+                <em class="addDay">+</em>
+            </p>
+        </div>
+    </div>
+</div>
+<!--<script src="http://apis.map.qq.com/ws/location/v1/ip?key=LFPBZ-3JLWW-OUQRV-R5Q2G-HYFVV-U5FQX&output=jsonp"></script>-->
+<script src="../../lib/swiper.js"></script>
+<script src="../../dist/js/index.js"></script>
+</body>
+</html>

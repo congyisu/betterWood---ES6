@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/*公共样式*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; }
+
+html, body, .container, .hotellistBox, #detailwrapbox, #orderbox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/*下边框*/
+.slide-selector .slide-wrapper .slide-items .slide-item {
+  border-bottom: 1px solid #ccc; }
+
+/*日历页-上月日期*/
+.to-gray {
+  color: #ccc; }
+
+.graycolor {
+  color: #999; }
+
+/*加载动画*/
+.loading {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .loading .circle-wrap {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px -25px;
+    transform: translate3d(-50%, -50%, 0);
+    animation: loading 4s linear infinite; }
+    .loading .circle-wrap .circle {
+      position: absolute;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      background: #e0f2be; }
+    .loading .circle-wrap .circle-index1 {
+      transform: rotate(45deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index2 {
+      transform: rotate(90deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index3 {
+      transform: rotate(135deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index4 {
+      transform: rotate(180deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index5 {
+      transform: rotate(225deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index6 {
+      transform: rotate(270deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index7 {
+      transform: rotate(315deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index8 {
+      transform: rotate(360deg);
+      transform-origin: 25px 25px; }
+
+.none {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.slide-selector {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); }
+  .slide-selector .slide-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: #fff;
+    transition: transform 0.2s ease-in-out;
+    transform: translate3d(0, 100%, 0); }
+    .slide-selector .slide-wrapper .header {
+      display: flex;
+      height: 30px;
+      line-height: 30px;
+      margin: 8px; }
+      .slide-selector .slide-wrapper .header .title {
+        flex: auto;
+        text-align: center; }
+      .slide-selector .slide-wrapper .header .cancel {
+        color: #333;
+        background: #EEEEEE; }
+      .slide-selector .slide-wrapper .header .done {
+        color: #fff;
+        background: #24aef2; }
+      .slide-selector .slide-wrapper .header .cancel, .slide-selector .slide-wrapper .header .done {
+        border: 1px solid #EEEEEE;
+        padding: 0 8px;
+        border-radius: 5px;
+        font-size: 13px; }
+    .slide-selector .slide-wrapper .slide-items {
+      height: 100%;
+      overflow-y: scroll;
+      padding-bottom: 44px; }
+      .slide-selector .slide-wrapper .slide-items .slide-item {
+        line-height: 44px;
+        text-align: center; }
+  .slide-selector .slide-wrapper-show {
+    transform: translate3d(0, 0, 0); }

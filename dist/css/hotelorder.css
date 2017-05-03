@@ -1,0 +1,730 @@
+@charset "UTF-8";
+/*公共样式*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; }
+
+html, body, .container, .hotellistBox, #detailwrapbox, #orderbox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/*下边框*/
+.slide-selector .slide-wrapper .slide-items .slide-item, .orderfinish .orderfinish-near dl {
+  border-bottom: 1px solid #ccc; }
+
+/*日历页-上月日期*/
+.to-gray {
+  color: #ccc; }
+
+.graycolor {
+  color: #999; }
+
+/*加载动画*/
+.loading {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .loading .circle-wrap {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px -25px;
+    transform: translate3d(-50%, -50%, 0);
+    animation: loading 4s linear infinite; }
+    .loading .circle-wrap .circle {
+      position: absolute;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      background: #e0f2be; }
+    .loading .circle-wrap .circle-index1 {
+      transform: rotate(45deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index2 {
+      transform: rotate(90deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index3 {
+      transform: rotate(135deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index4 {
+      transform: rotate(180deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index5 {
+      transform: rotate(225deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index6 {
+      transform: rotate(270deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index7 {
+      transform: rotate(315deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index8 {
+      transform: rotate(360deg);
+      transform-origin: 25px 25px; }
+
+.none {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+/*公共样式*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box; }
+
+html, body, .container, .hotellistBox, #detailwrapbox, #orderbox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/*下边框*/
+.slide-selector .slide-wrapper .slide-items .slide-item, .orderfinish .orderfinish-near dl {
+  border-bottom: 1px solid #ccc; }
+
+/*日历页-上月日期*/
+.to-gray {
+  color: #ccc; }
+
+.graycolor {
+  color: #999; }
+
+/*加载动画*/
+.loading {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .loading .circle-wrap {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px -25px;
+    transform: translate3d(-50%, -50%, 0);
+    animation: loading 4s linear infinite; }
+    .loading .circle-wrap .circle {
+      position: absolute;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      background: #e0f2be; }
+    .loading .circle-wrap .circle-index1 {
+      transform: rotate(45deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index2 {
+      transform: rotate(90deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index3 {
+      transform: rotate(135deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index4 {
+      transform: rotate(180deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index5 {
+      transform: rotate(225deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index6 {
+      transform: rotate(270deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index7 {
+      transform: rotate(315deg);
+      transform-origin: 25px 25px; }
+    .loading .circle-wrap .circle-index8 {
+      transform: rotate(360deg);
+      transform-origin: 25px 25px; }
+
+.none {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.slide-selector {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); }
+  .slide-selector .slide-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: #fff;
+    transition: transform 0.2s ease-in-out;
+    transform: translate3d(0, 100%, 0); }
+    .slide-selector .slide-wrapper .header {
+      display: flex;
+      height: 30px;
+      line-height: 30px;
+      margin: 8px; }
+      .slide-selector .slide-wrapper .header .title {
+        flex: auto;
+        text-align: center; }
+      .slide-selector .slide-wrapper .header .cancel {
+        color: #333;
+        background: #EEEEEE; }
+      .slide-selector .slide-wrapper .header .done {
+        color: #fff;
+        background: #24aef2; }
+      .slide-selector .slide-wrapper .header .cancel, .slide-selector .slide-wrapper .header .done {
+        border: 1px solid #EEEEEE;
+        padding: 0 8px;
+        border-radius: 5px;
+        font-size: 13px; }
+    .slide-selector .slide-wrapper .slide-items {
+      height: 100%;
+      overflow-y: scroll;
+      padding-bottom: 44px; }
+      .slide-selector .slide-wrapper .slide-items .slide-item {
+        line-height: 44px;
+        text-align: center; }
+  .slide-selector .slide-wrapper-show {
+    transform: translate3d(0, 0, 0); }
+
+/*������дҳ*/
+.writeorder {
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+  display: -webkit-flex;
+  flex-direction: column; }
+  .writeorder .writeorder-head {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #dbdde3;
+    position: relative;
+    background: #fff; }
+    .writeorder .writeorder-head span {
+      position: absolute;
+      color: #24aef2;
+      font-size: 16px;
+      left: 10px;
+      top: 0; }
+    .writeorder .writeorder-head h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 1em; }
+  .writeorder .writeorder-section {
+    width: 100%;
+    overflow-y: scroll;
+    flex-grow: 1; }
+    .writeorder .writeorder-section .writeorder-hotelinfo {
+      width: 100%;
+      background: #fff; }
+      .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist {
+        background: #fff;
+        margin: 0 9px 0 10px;
+        border-bottom: 1px solid #edeef1; }
+        .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist dl {
+          border-bottom: 1px solid #d9d9d9;
+          display: -webkit-flex;
+          padding: 16px 0 12px 4px; }
+          .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist dl dt {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #CCCCCC;
+            margin-right: 16px; }
+            .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist dl dt img {
+              width: 70px;
+              height: 70px; }
+          .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist dl dd {
+            flex-grow: 1;
+            position: relative; }
+            .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist dl dd h2 {
+              font-size: 0.85em;
+              padding-top: 1%;
+              color: #333;
+              line-height: 20px; }
+            .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist dl dd b {
+              font-size: 0.85em;
+              color: #333;
+              font-weight: normal;
+              line-height: 20px; }
+            .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist dl dd p em {
+              color: #FD9228; }
+            .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist dl dd p i {
+              font-size: 10.5px;
+              color: #fff;
+              background: #FD9228;
+              padding: 1px 3px;
+              position: absolute;
+              border-radius: 2px;
+              left: 15%;
+              top: 45px;
+              height: 17px;
+              line-height: 17px; }
+        .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist .writeorder-date {
+          width: 100%;
+          height: 40px;
+          line-height: 40px; }
+          .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist .writeorder-date a {
+            width: 50%;
+            text-align: center;
+            display: inline-block;
+            float: left;
+            color: #666;
+            font-size: 0.8em; }
+            .writeorder .writeorder-section .writeorder-hotelinfo .writeorder-hotelinfolist .writeorder-date a:first-child {
+              border-right: 1px solid #d9d9d9; }
+    .writeorder .writeorder-section .fill-order-model {
+      width: 100%; }
+      .writeorder .writeorder-section .fill-order-model h3 {
+        height: 40px;
+        color: #999;
+        padding-top: 16px;
+        padding-left: 16.5px; }
+      .writeorder .writeorder-section .fill-order-model .fill-order-info {
+        width: 100%;
+        padding-left: 10px;
+        background: #fff;
+        border-top: 1px solid #edeef1;
+        border-bottom: 1px solid #edeef1; }
+        .writeorder .writeorder-section .fill-order-model .fill-order-info p {
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          padding-left: 8px;
+          padding-right: 5px;
+          overflow: hidden; }
+          .writeorder .writeorder-section .fill-order-model .fill-order-info p:first-child {
+            border-bottom: 1px solid #edeef1; }
+          .writeorder .writeorder-section .fill-order-model .fill-order-info p .left {
+            color: #333;
+            font-size: 14px;
+            float: left;
+            width: 60px; }
+          .writeorder .writeorder-section .fill-order-model .fill-order-info p .right {
+            font-weight: normal;
+            float: right; }
+            .writeorder .writeorder-section .fill-order-model .fill-order-info p .right span:first-child {
+              color: #333;
+              font-size: 14px; }
+            .writeorder .writeorder-section .fill-order-model .fill-order-info p .right span:last-child {
+              font-size: 12.5px;
+              color: #24aef2; }
+          .writeorder .writeorder-section .fill-order-model .fill-order-info p input {
+            padding-left: 5px;
+            font-size: 14px;
+            color: #333333; }
+          .writeorder .writeorder-section .fill-order-model .fill-order-info p em {
+            color: #C4C6D2;
+            font-size: 14px;
+            float: right;
+            padding-right: 6px; }
+    .writeorder .writeorder-section .writeorder-content .writeorder-content-list {
+      padding: 18px 15px; }
+      .writeorder .writeorder-section .writeorder-content .writeorder-content-list h3 {
+        color: #f24c3d;
+        font-size: 12.5px; }
+      .writeorder .writeorder-section .writeorder-content .writeorder-content-list article {
+        color: #333;
+        margin-top: 8px;
+        font-size: 9.5px;
+        line-height: 25px; }
+    .writeorder .writeorder-section .writeorder-foot {
+      width: 100%;
+      display: flex;
+      height: 55px;
+      line-height: 55px;
+      padding: 0; }
+      .writeorder .writeorder-section .writeorder-foot a {
+        flex-grow: 1;
+        color: #fff;
+        text-align: center;
+        font-size: 15px; }
+        .writeorder .writeorder-section .writeorder-foot a:first-child {
+          background: #16498f; }
+        .writeorder .writeorder-section .writeorder-foot a:last-child {
+          background: #24aef2; }
+  .writeorder .ordermask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: transform 0.01s ease-in;
+    transform: translate3d(0, 100%, 0); }
+    .writeorder .ordermask.show {
+      transform: translate3d(0, 0, 0) !important; }
+    .writeorder .ordermask .ordermaskbox {
+      width: 240px;
+      height: 100px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -120px;
+      margin-top: -50px; }
+      .writeorder .ordermask .ordermaskbox p:first-child {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #C9C9C9;
+        font-size: 14px;
+        color: #333;
+        line-height: 22px; }
+      .writeorder .ordermask .ordermaskbox p:last-child {
+        width: 100%;
+        height: 35px; }
+        .writeorder .ordermask .ordermaskbox p:last-child a {
+          width: 50%;
+          font-size: 14px;
+          display: inline-block;
+          color: #333;
+          text-align: center; }
+          .writeorder .ordermask .ordermaskbox p:last-child a:first-child {
+            border-right: 1px solid #c9c9c9;
+            line-height: 35px; }
+
+/*��������ҳ*/
+.secured-transaction {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f5f6f5;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s ease-in-out; }
+  .secured-transaction .secured-transaction-head {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #dbdde3;
+    position: relative;
+    background: #fff; }
+    .secured-transaction .secured-transaction-head span {
+      position: absolute;
+      color: #24aef2;
+      font-size: 16px;
+      left: 10px;
+      top: 0; }
+    .secured-transaction .secured-transaction-head h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 1em; }
+  .secured-transaction .secured-transaction-section {
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: scroll; }
+    .secured-transaction .secured-transaction-section .secured-transaction-currentbalance {
+      width: 100%;
+      height: 47px;
+      border-bottom: 1px solid #C8C8C8;
+      display: flex;
+      padding: 0 16px;
+      line-height: 47px; }
+      .secured-transaction .secured-transaction-section .secured-transaction-currentbalance span {
+        flex-grow: 1;
+        color: #333; }
+        .secured-transaction .secured-transaction-section .secured-transaction-currentbalance span:last-child {
+          text-align: right; }
+    .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo {
+      width: 100%;
+      background: #fff; }
+      .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist {
+        background: #fff;
+        margin: 0 9px 0 10px;
+        border-bottom: 1px solid #edeef1; }
+        .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist dl {
+          display: -webkit-flex;
+          padding: 16px 0 12px 4px; }
+          .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist dl dt {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #CCCCCC;
+            margin-right: 16px; }
+            .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist dl dt img {
+              width: 70px;
+              height: 70px; }
+          .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist dl dd {
+            flex-grow: 1;
+            position: relative; }
+            .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist dl dd h2 {
+              font-size: 0.85em;
+              padding-top: 1%;
+              color: #333;
+              line-height: 20px; }
+            .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist dl dd b {
+              font-size: 0.85em;
+              color: #333;
+              font-weight: normal;
+              line-height: 20px; }
+            .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist dl dd p em {
+              color: #FD9228; }
+            .secured-transaction .secured-transaction-section .secured-transaction-hotelinfo .secured-transaction-hotelinfolist dl dd p i {
+              font-size: 10.5px;
+              color: #fff;
+              background: #FD9228;
+              padding: 1px 3px;
+              position: absolute;
+              border-radius: 2px;
+              left: 15%;
+              top: 45px;
+              height: 17px;
+              line-height: 17px; }
+    .secured-transaction .secured-transaction-section .fill-order-model {
+      width: 100%; }
+      .secured-transaction .secured-transaction-section .fill-order-model h3 {
+        height: 40px;
+        color: #999;
+        padding-top: 16px;
+        padding-left: 16.5px; }
+      .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info {
+        width: 100%;
+        padding-left: 10px;
+        background: #fff;
+        border-top: 1px solid #edeef1;
+        border-bottom: 1px solid #edeef1; }
+        .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info p {
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          padding-left: 8px;
+          padding-right: 5px;
+          overflow: hidden; }
+          .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info p:first-child {
+            border-bottom: 1px solid #edeef1; }
+          .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info p .left {
+            color: #333;
+            font-size: 14px;
+            float: left;
+            width: 75px; }
+          .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info p input {
+            padding-left: 25px;
+            font-size: 14px;
+            color: #333333; }
+          .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info p em {
+            color: #C4C6D2;
+            font-size: 14px;
+            float: right;
+            padding-right: 6px; }
+        .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info .IDcard-bank span:first-child, .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info .IDcard-class span:first-child {
+          color: #333;
+          display: inline-block;
+          font-size: 14px;
+          width: 75px; }
+        .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info .IDcard-bank span:nth-child(2), .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info .IDcard-class span:nth-child(2) {
+          color: #333;
+          font-size: 14px;
+          padding-left: 20px; }
+        .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info .IDcard-bank span:last-child, .secured-transaction .secured-transaction-section .fill-order-model .fill-order-info .IDcard-class span:last-child {
+          font-size: 12.5px;
+          color: #24aef2;
+          float: right;
+          padding-right: 6px; }
+    .secured-transaction .secured-transaction-section .secured-transaction-content .secured-transaction-content-list {
+      padding: 10px 15px 10px 15px; }
+      .secured-transaction .secured-transaction-section .secured-transaction-content .secured-transaction-content-list h3 {
+        color: #f24c3d;
+        font-size: 12.5px; }
+      .secured-transaction .secured-transaction-section .secured-transaction-content .secured-transaction-content-list article {
+        color: #333;
+        margin-top: 8px;
+        font-size: 9.5px;
+        line-height: 25px; }
+    .secured-transaction .secured-transaction-section .secured-transaction-foot {
+      width: 100%;
+      display: flex;
+      height: 55px;
+      line-height: 55px;
+      padding: 0; }
+      .secured-transaction .secured-transaction-section .secured-transaction-foot a {
+        flex-grow: 1;
+        color: #fff;
+        text-align: center;
+        font-size: 15px; }
+        .secured-transaction .secured-transaction-section .secured-transaction-foot a:first-child {
+          background: #16498f; }
+        .secured-transaction .secured-transaction-section .secured-transaction-foot a:last-child {
+          background: #24aef2; }
+
+.secured-transaction-active {
+  transform: translate3d(0, 0, 0); }
+
+/*Ԥ���ɹ�ҳ��*/
+.orderfinish {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f5f6f5;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s ease-in-out; }
+  .orderfinish .orderfinish-tit {
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid #EFEFEF; }
+    .orderfinish .orderfinish-tit p:first-child {
+      text-align: center;
+      padding-top: 32px;
+      color: #24aef2; }
+      .orderfinish .orderfinish-tit p:first-child span:first-child {
+        font-size: 54px; }
+      .orderfinish .orderfinish-tit p:first-child span:last-child {
+        color: #24aef2;
+        line-height: 31px; }
+    .orderfinish .orderfinish-tit p:nth-child(2) {
+      padding: 6px 23px 0 23px;
+      font-size: 11px;
+      color: #666666;
+      line-height: 19px; }
+    .orderfinish .orderfinish-tit p:last-child {
+      width: 88%;
+      margin: auto;
+      padding-bottom: 25px; }
+      .orderfinish .orderfinish-tit p:last-child a {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 13px;
+        width: 47%;
+        border: 1px solid #24aef2;
+        border-radius: 5px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center; }
+        .orderfinish .orderfinish-tit p:last-child a:first-child {
+          margin-right: 6%;
+          background: #24aef2;
+          color: #fff; }
+        .orderfinish .orderfinish-tit p:last-child a:last-child {
+          color: #24aef2; }
+  .orderfinish .orderfinish-near {
+    width: 100%;
+    margin-top: 19px;
+    padding: 0 10px;
+    border-top: 1px solid #eeeeee;
+    background: #fff; }
+    .orderfinish .orderfinish-near .near-info {
+      height: 43px;
+      line-height: 43px;
+      border-bottom: 1px solid #ccc; }
+      .orderfinish .orderfinish-near .near-info h2 {
+        font-size: 14px;
+        float: left; }
+      .orderfinish .orderfinish-near .near-info b {
+        font-weight: normal;
+        float: right;
+        font-size: 12px;
+        color: #888; }
+        .orderfinish .orderfinish-near .near-info b span:last-child {
+          font-size: 12px; }
+    .orderfinish .orderfinish-near dl {
+      width: 100%;
+      padding: 20px 12px;
+      display: -webkit-flex; }
+      .orderfinish .orderfinish-near dl dt {
+        width: 70px;
+        height: 70px;
+        margin-right: 13px;
+        margin-top: 3px; }
+        .orderfinish .orderfinish-near dl dt img {
+          width: 70px;
+          height: 70px; }
+      .orderfinish .orderfinish-near dl dd {
+        flex-grow: 1;
+        width: 60%; }
+        .orderfinish .orderfinish-near dl dd h3 {
+          font-size: 14px;
+          color: #333333;
+          width: 80%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .orderfinish .orderfinish-near dl dd .one {
+          display: -webkit-flex; }
+          .orderfinish .orderfinish-near dl dd .one p:first-child span {
+            font-size: 11px;
+            color: #E59442;
+            margin-right: 10px; }
+          .orderfinish .orderfinish-near dl dd .one p:first-child strong:nth-child(2) {
+            font-weight: normal; }
+            .orderfinish .orderfinish-near dl dd .one p:first-child strong:nth-child(2) em {
+              display: inline-block;
+              font-size: 8px;
+              padding: 0 1px;
+              height: 16px;
+              line-height: 16px;
+              background: #F88D25;
+              color: #fff; }
+          .orderfinish .orderfinish-near dl dd .one p:first-child strong:nth-child(3) {
+            font-weight: normal; }
+            .orderfinish .orderfinish-near dl dd .one p:first-child strong:nth-child(3) em {
+              display: inline-block;
+              font-size: 8px;
+              padding: 0 1px;
+              height: 16px;
+              line-height: 16px;
+              background: #F24C3C;
+              color: #fff; }
+          .orderfinish .orderfinish-near dl dd .one p:first-child strong:nth-child(4) {
+            font-weight: normal; }
+            .orderfinish .orderfinish-near dl dd .one p:first-child strong:nth-child(4) em {
+              display: inline-block;
+              font-size: 8px;
+              padding: 0 1px;
+              height: 16px;
+              line-height: 16px;
+              background: #15ACE3;
+              color: #fff; }
+          .orderfinish .orderfinish-near dl dd .one p:last-child {
+            flex-grow: 1;
+            text-align: right; }
+            .orderfinish .orderfinish-near dl dd .one p:last-child b {
+              font-weight: normal;
+              color: #E59442; }
+            .orderfinish .orderfinish-near dl dd .one p:last-child i {
+              font-size: 11px;
+              color: #777777; }
+        .orderfinish .orderfinish-near dl dd .two span, .orderfinish .orderfinish-near dl dd .three span {
+          color: #777;
+          font-size: 10px; }
+        .orderfinish .orderfinish-near dl dd .three {
+          width: 100%; }
+          .orderfinish .orderfinish-near dl dd .three span:first-child {
+            width: 75%;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; }
+          .orderfinish .orderfinish-near dl dd .three span:last-child {
+            float: right; }
+
+.orderfinish-active {
+  transform: translate3d(0, 0, 0); }

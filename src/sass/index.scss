@@ -1,0 +1,125 @@
+@import "common";
+@import "city";
+@import "calendar";
+
+/*酒店预订首页*/
+.container {
+  width: 100%;
+  height: 100%;
+  background: $backColor;
+  .banner {
+    width: 100%;
+    height: 135px;
+    ul, ul li {
+      height: 135px;
+    }
+    img {
+      width: 100%;
+      height: 135px;
+    }
+    h3 {
+      font-size: 1.25em;
+      color: $whiteColor;
+      position: absolute;
+      left: 10px;
+      bottom: 9px;
+      z-index: 2;
+    }
+  }
+  .index-main {
+    @extend %bb;
+    padding-left: 15px;
+    background: $whiteColor;
+    .main-item {
+      width: 100%;
+      @extend %bb;
+      height: 70px;
+      line-height: 70px;
+      span:first-child {
+        color: #E6E6E6;
+        font-size: 40%;
+        margin-right: 10px;
+      }
+      span:nth-child(2) {
+        font-size: 0.75em;
+        color: $dimColor;
+        margin-right: 25px;
+      }
+      span:nth-child(3) {
+        font-size: 0.85em;
+      }
+    }
+    .main-item:first-child {
+      position: relative;
+      span:nth-child(3) {
+        color: $baseColor;
+      }
+      span:nth-child(4) {
+        color: $baseColor;
+        position: absolute;
+        right: 85px;
+        top: 0;
+        font-size: 8px;
+      }
+      .location {
+        width: 70px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-block;
+        display: -webkit-flex;
+        flex-direction: column;
+        border-left: 1px solid #ccc;
+        color: $baseColor;
+        em, small {
+          display: inline-block;
+          height: 50%;
+          line-height: 35px;
+          text-align: center;
+        }
+        small {
+          font-size: 0.7em;
+        }
+      }
+    }
+    .main-item:nth-child(2) {
+      span:nth-child(3) {
+        color: #333;
+      }
+      span:nth-child(4) {
+        color: $baseColor;
+        float: right;
+        margin-right: 15px;
+        font-size: 8px;
+      }
+    }
+    .main-item:nth-child(3) {
+      @extend .main-item:nth-child(2);
+      span:nth-child(3) {
+        em {
+          font-style: normal;
+          font-size: 0.85em;
+        }
+        strong, b {
+          font-weight: normal;
+          font-size: 0.85em;
+        }
+      }
+    }
+    .main-item:last-child {
+      border-bottom: none;
+    }
+  }
+  .search {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: $baseColor;
+    color: $whiteColor;
+    margin-top: 16px;
+    text-align: center;
+    span:first-child {
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,245 @@
+@import "common";
+@import "city";
+@import "calendar";
+
+.hotellistBox {
+  /*酒店列表页*/
+  .detailslist {
+    width: 100%;
+    height: 100%;
+    background: $whiteColor;
+    display: -webkit-flex;
+    flex-direction: column;
+    .details-head {
+      width: 100%;
+      height: 45px;
+      line-height: 45px;
+      border-bottom: 1px solid #dbdde3;
+      position: relative;
+      span {
+        position: absolute;
+        color: $baseColor;
+        font-size: 16px;
+        left: 10px;
+        top: 0;
+      }
+      h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 1em;
+      }
+      .nights, .check-out-date-info {
+        display: none;
+      }
+    }
+    .details-tit {
+      width: 100%;
+      height: 38px;
+      border-bottom: 2px solid #dbdde3;
+      background: $backColor;
+      padding-left: 15px;
+      padding-right: 10px;
+      p {
+        line-height: 38px;
+      }
+      p:first-child {
+        float: left;
+        color: #666;
+        b {
+          font-weight: normal;
+          font-size: 0.9em;
+        }
+        span {
+          font-size: 0.9em;
+        }
+        span:first-child {
+          margin-right: 20px;
+        }
+      }
+      p:last-child {
+        float: right;
+        font-size: 0.9em;
+        color: $baseColor;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    .details-info {
+      width: 100%;
+      flex-grow: 1;
+      overflow-y: scroll;
+      dl {
+        width: 100%;
+        padding: 20px 12px;
+        @extend %bb;
+        display: -webkit-flex;
+        dt {
+          width: 70px;
+          height: 70px;
+          margin-right: 13px;
+          margin-top: 4px;
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+        dd {
+          flex-grow: 1;
+          width: 60%;
+          h3 {
+            font-size: 14px;
+            color: #333333;
+            width: 80%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          .one {
+            display: -webkit-flex;
+            p:first-child {
+              span {
+                font-size: 11px;
+                color: #E59442;
+                margin-right: 10px;
+              }
+              strong:nth-child(2) {
+                font-weight: normal;
+                em {
+                  display: inline-block;
+                  font-size: 8px;
+                  padding: 0 1px;
+                  height: 16px;
+                  line-height: 16px;
+                  background: #F88D25;
+                  color: $whiteColor;
+                }
+              }
+              strong:nth-child(3) {
+                font-weight: normal;
+                em {
+                  display: inline-block;
+                  font-size: 8px;
+                  padding: 0 1px;
+                  height: 16px;
+                  line-height: 16px;
+                  background: #F24C3C;
+                  color: $whiteColor;
+                }
+              }
+              strong:nth-child(4) {
+                font-weight: normal;
+                em {
+                  display: inline-block;
+                  font-size: 8px;
+                  padding: 0 1px;
+                  height: 16px;
+                  line-height: 16px;
+                  background: #15ACE3;
+                  color: $whiteColor;
+                }
+              }
+            }
+            p:last-child {
+              flex-grow: 1;
+              text-align: right;
+              b {
+                font-weight: normal;
+                color: #E59442;
+              }
+              i {
+                font-size: 11px;
+                color: #777777;
+              }
+            }
+          }
+          .two {
+            span {
+              color: #777;
+              font-size: 10px;
+            }
+          }
+          .three {
+            @extend .two;
+            width: 100%;
+            span:first-child {
+              width: 75%;
+              display: inline-block;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            span:last-child {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    .filter {
+      width: 100%;
+      height: 38px;
+      .filter-nav {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 38px;
+        line-height: 38px;
+        background: $whiteColor;
+        display: -webkit-flex;border-top: 2px solid #24aef2;
+        li {
+          width: 25%;
+          text-align: center;
+
+          border-left: 1px solid #dbdbdb;
+          font-size: 0.8em;
+          color: #666666;
+        }
+        .noline {
+          border-left: none;
+        }
+        .addline {
+          border-top: 1px solid #24aef2;
+        }
+      }
+    }
+    .masker {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, .5);
+      display: none;
+      .filter-area {
+        width: 400%;
+        position: absolute;
+        bottom: 38px;
+        background: $whiteColor;
+        transition: transform ease 0.3s;
+        .filter-item {
+          width: 25%;
+          float: left;
+          p {
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            border-bottom: 1px solid #eeeeee;
+            padding-left: 20px;
+            padding-right: 15px;
+            color: #333333;
+            &:last-child {
+              border-bottom: none;
+            }
+            &.pcolor {
+              color: $baseColor !important;
+            }
+          }
+        }
+      }
+    }
+    .masker-show {
+      display: block;
+    }
+  }
+}

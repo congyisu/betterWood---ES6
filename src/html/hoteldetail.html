@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>酒店详情</title>
+    <link rel="stylesheet" href="../../dist/css/swiper.css"/>
+    <link rel="stylesheet" href="../../dist/css/reset.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../../dist/css/hoteldetail.css"/>
+</head>
+<body>
+<!--大盒子-->
+<div id="detailwrapbox">
+    <!--酒店详情-->
+    <div class="detailbox">
+        <div class="detailbox-head">
+            <span class="icon iconfont backs">&#xe652;</span>
+
+            <h2>酒店详情</h2>
+        </div>
+        <div class="detailbox-section">
+            <!--图集-->
+            <div class="img-wrap">
+                <img src="../../src/img/banner1.jpg"/>
+
+                <h3 class="check-all-img">查看图集</h3>
+            </div>
+            <!--图集遮罩层-->
+            <div class="all-img none">
+                <div class="all-img-wrap swiper-container"></div>
+            </div>
+            <!--酒店信息，介绍-->
+            <div class="detailbox-info">
+                <!--酒店信息，介绍标题-->
+                <div class="detailbox-info-tit">
+                    <a href="#" index="0" class="oInf">基本信息</a><a href="#" index="1" class="oIntroduction">酒店介绍</a>
+                </div>
+                <div class="detailbox-info-conts">
+                    <div class="infocont">
+                        <!--酒店信息-->
+                        <div class="detailbox-info-cont">
+                            <h4 class="contTit">北京王府井希尔顿酒店</h4>
+                            <ul>
+                                <li>
+                                    <span class="iconfont">&#xe61f;</span>
+                                    <span class="contRank">星级：五星级酒店</span>
+                                </li>
+                                <li>
+                                    <span class="iconfont">&#xe7b4;</span>
+                                    <span class="contTel">电话：13552354670</span>
+                                </li>
+                                <li>
+                                    <span class="iconfont">&#xf0039;</span>
+                                    <span class="contAddr">地址：北京市海淀区唐家岭路57号八维教育</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--酒店介绍-->
+                        <div class="detailbox-hotel-cont">
+                            <article class="hotelCont"></article>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="detailbox-room">
+                <div class="detailbox-room-tit">
+                    <p>
+                        <b>入住&nbsp</b><span class="listcheckin">7月8日</span>
+                        <b>离店&nbsp</b><span class="listcheckout">7月8日</span>
+                    </p>
+
+                    <p class="modify-date">修改 <span class="icon iconfont">&#xe654;</span></p>
+                </div>
+                <div class="detailbox-room-info">
+                    <div class="info-one">
+                        <p>
+                            <b>标准大床房</b>
+                            <span>大床</span><span>无早</span>
+                        </p>
+
+                        <p><span>￥320</span></p>
+
+                        <p><em class="order">预订</em></p>
+                    </div>
+                    <div class="info-two">
+                        <p>
+                            <b>标准房</b>
+                            <span>双人床</span><span>无早</span>
+                        </p>
+
+                        <p><span>￥120</span></p>
+
+                        <p><em>满房</em></p>
+                    </div>
+                    <div class="info-three">
+                        <p>
+                            <b>标准大床房</b>
+                            <span>大床</span><span>无早</span>
+                        </p>
+
+                        <p><span>￥320</span><i>担保</i></p>
+
+                        <p><em class="order">预订</em></p>
+                    </div>
+                </div>
+                <div class="detailbox-room-more">展开剩余全部</div>
+            </div>
+            <div class="detailbox-near">
+                <h2>周边酒店</h2>
+                <dl class="details-list" data-region='${val.district}' data-rank="${val.rank}" data-price='${val.price}'
+                    data-distance='${val.distance}' data-hotelid='${val.hotel_id}'>
+                    <dt><img src="../img/banner2.jpg"/></dt>
+                    <dd>
+                        <h3>北京京驻酒店式公寓</h3>
+
+                        <div class="one">
+                            <p>
+                                <span>4.7分</span>
+                                <strong><em>礼</em></strong>
+                                <strong><em>促</em></strong>
+                                <strong><em>返</em></strong>
+                            </p>
+
+                            <p>
+                                <b>￥115</b>
+                                <i>起</i>
+                            </p>
+                        </div>
+                        <div class="two">
+                            <span>五星</span>
+                            <span class="iconfont">&#xe621;</span>
+                            <span class="iconfont">&#xe63e;</span>
+                        </div>
+                        <div class="three">
+                            <span>八宝庄37号楼502室 地铁10号线西钓鱼台站(近定慧东街)</span>
+                            <span>0.78km</span>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="details-list" data-region='${val.district}' data-rank="${val.rank}" data-price='${val.price}'
+                    data-distance='${val.distance}' data-hotelid='${val.hotel_id}'>
+                    <dt><img src="../img/banner3.jpg"/></dt>
+                    <dd>
+                        <h3>北京中关村公馆(北京凯菱国际酒店)</h3>
+
+                        <div class="one">
+                            <p>
+                                <span>4.7分</span>
+                                <strong><em>礼</em></strong>
+                                <strong><em>促</em></strong>
+                                <strong><em>返</em></strong>
+                            </p>
+
+                            <p>
+                                <b>386</b>
+                                <i>起</i>
+                            </p>
+                        </div>
+                        <div class="two">
+                            <span>三星</span>
+                            <span class="iconfont">&#xe621;</span>
+                            <span class="iconfont">&#xe63e;</span>
+                        </div>
+                        <div class="three">
+                            <span>海淀区海淀中街16号(丹棱街海淀法院正南方,医院西北角)</span>
+                            <span>0.66km</span>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="detailbox-near-more">展开剩余全部</div>
+            </div>
+            <div class="detailbox-sale">
+                <h2>特价酒店</h2>
+                <dl class="details-list" data-region='${val.district}' data-rank="${val.rank}" data-price='${val.price}'
+                    data-distance='${val.distance}' data-hotelid='${val.hotel_id}'>
+                    <dt><img src="../img/banner4.jpg"/></dt>
+                    <dd>
+                        <h3>北京鹏飞快捷宾馆</h3>
+
+                        <div class="one">
+                            <p>
+                                <span>4.7分</span>
+                                <strong><em>礼</em></strong>
+                                <strong><em>促</em></strong>
+                                <strong><em>返</em></strong>
+                            </p>
+
+                            <p>
+                                <b>108</b>
+                                <i>起</i>
+                            </p>
+                        </div>
+                        <div class="two">
+                            <span>二星及以下 / 经济型</span>
+                            <span class="iconfont">&#xe621;</span>
+                            <span class="iconfont">&#xe63e;</span>
+                        </div>
+                        <div class="three">
+                            <span>海淀区宝盛西里3号1层1号</span>
+                            <span>0.11km</span>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="details-list" data-region='${val.district}' data-rank="${val.rank}" data-price='${val.price}'
+                    data-distance='${val.distance}' data-hotelid='${val.hotel_id}'>
+                    <dt><img src="../img/banner5.jpg"/></dt>
+                    <dd>
+                        <h3>7天连锁酒店(北京清河中街翠微店)</h3>
+
+                        <div class="one">
+                            <p>
+                                <span>4.7分</span>
+                                <strong><em>礼</em></strong>
+                                <strong><em>促</em></strong>
+                                <strong><em>返</em></strong>
+                            </p>
+
+                            <p>
+                                <b>￥189</b>
+                                <i>起</i>
+                            </p>
+                        </div>
+                        <div class="two">
+                            <span>五星</span>
+                            <span class="iconfont">&#xe621;</span>
+                            <span class="iconfont">&#xe63e;</span>
+                        </div>
+                        <div class="three">
+                            <span>清河中街金五星商厦正对面</span>
+                            <span>1.45km</span>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="detailbox-sale-more">展开剩余全部</div>
+            </div>
+        </div>
+        <!--详情页遮罩层-->
+        <div class="detailmask">
+            <!--遮罩层上的内容-->
+            <div class="detailmaskbox">
+                <div class="detailmaskbox-list">
+                    <dl>
+                        <dt></dt>
+                        <dd>
+                            <h2>标准大床房</h2>
+                            <b>￥90</b>
+                            <i>担保</i>
+
+                            <div class="maskdelete">+</div>
+                        </dd>
+                    </dl>
+                    <ul>
+                        <li>
+                            <span class="icon iconfont">&#xe601;</span>
+                            <span>面积</span>
+                            <span>12平方米</span>
+                        </li>
+                        <li>
+                            <span class="icon iconfont">&#xe601;</span>
+                            <span>可住</span>
+                            <span>1人</span>
+                        </li>
+                        <li>
+                            <span class="icon iconfont">&#xe601;</span>
+                            <span>床型</span>
+                            <span>单人床1.2米，1张</span>
+                        </li>
+                        <li>
+                            <span class="icon iconfont">&#xe601;</span>
+                            <span>宽带</span>
+                            <span>无</span>
+                        </li>
+                        <li>
+                            <span class="icon iconfont">&#xe601;</span>
+                            <span>提供</span>
+                            <span>免费早餐</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ordernow">立即预订</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/swiper.js"></script>
+<script src="../../dist/js/hoteldetail.js"></script>
+</body>
+</html>

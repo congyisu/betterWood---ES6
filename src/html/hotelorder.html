@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title>订单</title>
+    <link rel="stylesheet" href="../../dist/css/reset.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../../dist/css/hotelorder.css"/>
+</head>
+<body>
+<div id="orderbox">
+    <!--订单填写页-->
+    <div class="writeorder">
+        <!--订单页头部-->
+        <div class="writeorder-head">
+            <span class="iconfont goback">&#xe652;</span>
+
+            <h2>订单填写</h2>
+        </div>
+        <!--订单页主体-->
+        <div class="writeorder-section">
+            <div class="writeorder-hotelinfo">
+                <div class="writeorder-hotelinfolist">
+                    <dl>
+                        <dt><img src="../img/banner7.jpg"/></dt>
+                        <dd>
+                            <h2>北京王府井希尔顿酒店</h2>
+                            <b>标准大床房</b>
+
+                            <p><em>￥90</em><i>担保</i></p>
+                        </dd>
+                    </dl>
+                    <div class="writeorder-date">
+                        <a href="javascript:;">入住&nbsp&nbsp&nbsp7月21日</a>
+                        <a href="javascript:;">离店&nbsp&nbsp&nbsp7月22日</a>
+                    </div>
+                </div>
+            </div>
+            <div class="fill-order">
+                <section>
+                    <div class="fill-order-model">
+                        <h3>房间信息</h3>
+                        <article class="fill-order-info">
+                            <p class="room-count">
+                                <i class="left">房间数量</i>
+                                <b class="right">
+                                    <span class="rightNum">1</span>
+                                    <span class="iconfont">&#xe654;</span>
+                                </b>
+                            </p>
+                            <p class="check-in-time">
+                                <i class="left">到店时间</i>
+                                <b class="right">
+                                    <span class="rightTime">19:00以前</span>
+                                    <span class="iconfont">&#xe654;</span>
+                                </b>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="fill-order-model">
+                        <h3>入住人信息</h3>
+                        <div class="fill-order-info-box">
+                            <article class="fill-order-info">
+                                <p>
+                                    <i class="left">姓名</i>
+                                    <input type="text" placeholder="每间只需填写一个姓名"/>
+                                </p>
+                                <p>
+                                    <i class="left">证件</i>
+                                    <input type="text" placeholder="入住人身份证号/护照号"/>
+                                    <em class="iconfont">&#xe631;</em>
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="fill-order-model">
+                        <h3>联系人信息</h3>
+                        <article class="fill-order-info">
+                            <p>
+                                <i class="left">姓名</i>
+                                <input type="text" placeholder="联系人姓名"/>
+                            </p>
+                            <p>
+                                <i class="left">手机</i>
+                                <input type="text" placeholder="用于接收通知短信"/>
+                                <em class="iconfont">&#xe631;</em>
+                            </p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <div class="writeorder-content">
+                <div class="writeorder-content-list">
+                    <h3>温馨提示：</h3>
+                    <article>当前房间紧张，需冻结您的信用卡余额90元用于担保订单，如订单不确定我们将立刻进行冻结。该订单确认后不可被取消修改。如未入住或取消修改，担保费用将不予退还。</article>
+                </div>
+            </div>
+            <!--订单页底部-->
+            <div class="writeorder-foot">
+                <a href="#">担保交易：￥90</a>
+                <a href="#" class="ordercheckbtn">立即预订</a>
+            </div>
+        </div>
+        <!--返回按钮弹出遮罩层-->
+        <div class="ordermask">
+            <!--遮罩层上的内容-->
+            <div class="ordermaskbox">
+                <p>是否放弃下单，<br>返回到该酒店详情页？</p>
+                <p><a href="#" class="yes">是</a><a href="#" class="no">否</a></p>
+            </div>
+        </div>
+    </div>
+    <!--&lt;!&ndash;选择时弹出遮罩层&ndash;&gt;
+    <div class="slide-selector">
+        <div class="slide-wrapper">
+            <div class="header">
+                <span class="cancel">取消</span>
+                <span class="title">title</span>
+                <span class="done">确定</span>
+            </div>
+            <div class="slide-items">
+                <ul>
+                    <li class="slide-item">1</li>
+                    <li class="slide-item">2</li>
+                    <li class="slide-item">3</li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+    <!--担保交易页-->
+    <div class="secured-transaction">
+        <!--担保交易页头部-->
+        <div class="secured-transaction-head">
+            <span class="iconfont backwriteorder">&#xe652;</span>
+
+            <h2>担保交易</h2>
+        </div>
+        <!--担保交易页主体-->
+        <div class="secured-transaction-section">
+            <div class="secured-transaction-hotelinfo">
+                <div class="secured-transaction-hotelinfolist">
+                    <dl>
+                        <dt><img src="../img/banner7.jpg"/></dt>
+                        <dd>
+                            <h2>北京王府井希尔顿酒店</h2>
+                            <b>标准大床房</b>
+
+                            <p><em>￥90</em><i>担保</i></p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="fill-order">
+                <section>
+                    <div class="fill-order-model">
+                        <h3>卡信息</h3>
+                        <article class="fill-order-info">
+                            <p class="IDcard-bank">
+                                <span>发卡银行</span>
+                                <span class="banks">工商银行</span>
+                                <span class="iconfont">&#xe654;</span>
+                            </p>
+                            <p>
+                                <i class="left">卡号</i>
+                                <input type="text" value="4003434343434545"/>
+                                <em class="iconfont">&#xe631;</em>
+                            </p>
+                            <p>
+                                <i class="left">卡有效期</i>
+                                <input type="text" placeholder="月份/年份"/>
+                            </p>
+                            <p>
+                                <i class="left">卡验证码</i>
+                                <input type="text" placeholder="签名栏末尾最后3位"/>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="fill-order-model">
+                        <h3>持卡人信息</h3>
+                        <article class="fill-order-info">
+                            <p>
+                                <i class="left">持卡人信息</i>
+                                <input type="text" placeholder="填写姓名"/>
+                            </p>
+                            <p class="IDcard-class">
+                                <span>证件类型</span>
+                                <span class="idcards">身份证</span>
+                                <span class="iconfont">&#xe654;</span>
+                            </p>
+                            <p>
+                                <i class="left">证件号码</i>
+                                <input type="text" placeholder="填写证件号码"/>
+                                <em class="iconfont">&#xe631;</em>
+                            </p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+            <div class="secured-transaction-content">
+                <div class="secured-transaction-content-list">
+                    <h3>支付安全承诺：</h3>
+                    <article>百达屋采用国际标准的加密算法来保证支付信息传输安全，并承诺保障用户在百达屋的信息安全，一旦由百达屋安全问题造成的资金问题，百达屋全额赔付。</article>
+                </div>
+                <div class="secured-transaction-content-list">
+                    <h3>罚金细则：</h3>
+                    <article>这里显示各种罚金细则。无则取消</article>
+                </div>
+            </div>
+            <!--担保交易页底部-->
+            <div class="secured-transaction-foot">
+                <a href="#">担保交易：￥90</a>
+                <a href="#" class="onfirmation-guarantee">确认担保</a>
+            </div>
+        </div>
+    </div>
+    <!--预订成功页面-->
+    <div class="orderfinish">
+        <div class="orderfinish-tit">
+            <p>
+                <span class="iconfont">&#xe784;</span><br>
+                <span>预订成功!</span>
+            </p>
+            <p>您于7月21日在北京王府井希尔顿酒店预订了2间标准大床房，稍后你将收到手机短信，请注意查收！</p>
+            <p><a href="#" class="checkOrder">查看订单详情</a><a href="#" class="backIndex">返回酒店首页</a></p>
+        </div>
+        <div class="orderfinish-near">
+            <div class="near-info">
+                <h2>周边景点</h2>
+                <b>景点首页
+                    <span class="iconfont">&#xe654;</span>
+                </b>
+            </div>
+            <dl class="details-list" data-region='${val.district}' data-rank="${val.rank}" data-price='${val.price}'
+                data-distance='${val.distance}' data-hotelid='${val.hotel_id}'>
+                <dt><img src="../img/banner5.jpg"/></dt>
+                <dd>
+                    <h3>7天连锁酒店(北京清河中街翠微店)</h3>
+
+                    <div class="one">
+                        <p>
+                            <span>4.7分</span>
+                            <strong><em>礼</em></strong>
+                            <strong><em>促</em></strong>
+                            <strong><em>返</em></strong>
+                        </p>
+
+                        <p>
+                            <b>￥189</b>
+                            <i>起</i>
+                        </p>
+                    </div>
+                    <div class="two">
+                        <span>五星</span>
+                        <span class="iconfont">&#xe621;</span>
+                        <span class="iconfont">&#xe63e;</span>
+                    </div>
+                    <div class="three">
+                        <span>清河中街金五星商厦正对面</span>
+                        <span>1.45km</span>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="details-list" data-region='${val.district}' data-rank="${val.rank}" data-price='${val.price}'
+                data-distance='${val.distance}' data-hotelid='${val.hotel_id}'>
+                <dt><img src="../img/banner5.jpg"/></dt>
+                <dd>
+                    <h3>7天连锁酒店(北京清河中街翠微店)</h3>
+
+                    <div class="one">
+                        <p>
+                            <span>4.7分</span>
+                            <strong><em>礼</em></strong>
+                            <strong><em>促</em></strong>
+                            <strong><em>返</em></strong>
+                        </p>
+
+                        <p>
+                            <b>￥189</b>
+                            <i>起</i>
+                        </p>
+                    </div>
+                    <div class="two">
+                        <span>五星</span>
+                        <span class="iconfont">&#xe621;</span>
+                        <span class="iconfont">&#xe63e;</span>
+                    </div>
+                    <div class="three">
+                        <span>清河中街金五星商厦正对面</span>
+                        <span>1.45km</span>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<script src="../../dist/js/hotelorder.js"></script>
+</body>
+</html>
